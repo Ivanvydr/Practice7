@@ -10,6 +10,19 @@ a = int(input())
 print_till_zero(a)
 
 
+# 2 функция is_palindrome(s)
+
+def s_palindrome(s): 
+    s=s.replace(" ","")    # если удалить пробелы, то предложение станет словом, его и можно проверить
+    flag = True
+    if len(s)>1:
+        if  s[0]!=s[-1]:
+            flag = False
+            return False
+        s=s[1:-1]
+        return s_palindrome(s)
+    return flag
+
 3)
 
 def power(a, n):
